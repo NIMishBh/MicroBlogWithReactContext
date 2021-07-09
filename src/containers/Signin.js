@@ -1,6 +1,6 @@
 import React from 'react';
 import { UserContext } from '../utils/Context';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 const INITIAL_VALUES = {
   username: '',
