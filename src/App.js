@@ -12,12 +12,10 @@ function App() {
   const [user, setUser] = React.useState(null);
   const [blogs, setBlogs] = React.useState([]);
 
-  const blogData = React.useMemo(()=> ({blogs,setBlogs}), [blogs,setBlogs]);
-
   return (
     <Router>
       <UserContext.Provider value={{ user, setUser }}>
-        <BlogContext.Provider value={blogData}>
+        <BlogContext.Provider value={{blogs,setBlogs}}>
           <Switch>
             <Route exact path='/' component={Signin} />
             <Route path='/blogs' component={Blogs} />
